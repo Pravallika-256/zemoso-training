@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comfy Cravings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+
+<h1>Comfy Cravings</h1>
+
+
+<div class="wrapper">
+
+  <aside class="tables-section">
+    <div class="section-header">
+      <h2>Tables</h2>
+      <div class="search-container">
+        <input type="text" id="tableSearch" placeholder="Search tables...">
+        <span class="clear-btn" onclick="
+          document.getElementById('tableSearch').value='';
+          renderTables();
+        ">×</span>
+      </div>
+    </div>
+    <div id="tableList" class="table-list"></div>
+  </aside>
+
+  <main class="menu-section">
+    <div class="section-header">
+      <h2>Menu</h2>
+
+      <div class="search-container">
+        <input type="text" id="menuSearchInput" placeholder="Search menu...">
+        <span class="clear-btn" onclick="
+          document.getElementById('menuSearchInput').value='';
+          renderMenu();
+        ">×</span>
+      </div>
+    </div>
+    <div id="menuList" class="menu-list"></div>
+  </main>
+</div>
+
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTableTitle">Table - 1 Order Details</h2>
+
+    <table class="order-table" id="orderDetails">
+    </table>
+
+
+    <div class="order-footer">
+      <div id="orderTotal">Total: ₹0</div>
+      <button onclick="generateBill()" class="generate-btn">Generate Bill</button>
+      <button onclick="clearOrder()" class="clear-btn-modal">Close Session (Clear)</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
