@@ -1,0 +1,9 @@
+.status-chip {
+  background-color: #EEF4FF; /* Match Figma light blue */
+  color: #558bea;            /* Match Figma text blue */
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px; /* Slightly rounded rectangle */
+  height: 24px;
+  text-transform: uppercase;
+}
